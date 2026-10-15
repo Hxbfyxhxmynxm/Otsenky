@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Smart Nation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Окно входа -->
+        <div id="login-card" class="card">
+            <h1>Smart Nation</h1>
+            <p class="subtitle">Введи данные от своего аккаунта</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="login" placeholder="Логин / ИИН" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" id="submit-btn">Войти</button>
+            </form>
+            <p id="error-msg" class="error"></p>
+        </div>
+
+        <!-- Оценки -->
+        <div id="dashboard" class="card hidden">
+            <header class="dash-header">
+                <h2>Мои оценки</h2>
+                <button id="logout-btn" class="logout-btn">Выйти</button>
+            </header>
+            <div id="grades-container" class="grades-list">
+                <div class="loader">Загрузка данных...</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
